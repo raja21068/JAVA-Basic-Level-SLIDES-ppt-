@@ -1,5 +1,5 @@
 # JAVA-Basic-Level-SLIDES
-# JAVA-Basic-Level-SLIDES
+
 <table border=3D0 cellpadding=3D0 cellspacing=3D0 width=3D658 style=3D'bord=
 er-collapse:
  collapse;table-layout:fixed;width:494pt'>
