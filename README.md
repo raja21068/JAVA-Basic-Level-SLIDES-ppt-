@@ -1,19 +1,7 @@
 # JAVA-Basic-Level-SLIDES
-<table border=3D0 cellpadding=3D0 cellspacing=3D0 width=3D527 style=3D'bord=
-er-collapse:
- collapse;table-layout:fixed;width:395pt'>
- <col width=3D104 style=3D'mso-width-source:userset;mso-width-alt:3803;widt=
-h:78pt'>
- <col width=3D297 style=3D'mso-width-source:userset;mso-width-alt:10861;wid=
-th:223pt'>
- <col width=3D63 span=3D2 style=3D'mso-width-source:userset;mso-width-alt:2=
-304;
- width:47pt'>
- <tr height=3D20 style=3D'height:15.0pt'>
-  <td colspan=3D4 rowspan=3D6 height=3D120 class=3Dxl97 width=3D527 style=
-=3D'height:90.0pt;
-  width:395pt'>Java Essential Training</td>
- </tr>
+# JAVA-Basic-Level-SLIDES
+<table >
+
  <tr height=3D20 style=3D'height:15.0pt'>
  </tr>
  <tr height=3D20 style=3D'height:15.0pt'>
@@ -28,62 +16,43 @@ th:223pt'>
   <td height=3D35 class=3Dxl90 width=3D104 style=3D'height:26.25pt;border-t=
 op:none;
   width:78pt'>Lecture</td>
-  <td class=3Dxl90 width=3D297 style=3D'border-top:none;border-left:none;wi=
-dth:223pt'>Course
+  <td>Course
   Plan</td>
-  <td class=3Dxl90 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>Est.
+  <td>Est.
   Start Date</td>
-  <td class=3Dxl90 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>Est.
+  <td>Est.
   Days</td>
  </tr>
- <tr height=3D27 style=3D'height:20.25pt'>
-  <td colspan=3D2 height=3D27 class=3Dxl98 width=3D401 style=3D'height:20.2=
-5pt;
-  width:301pt'>Java Essential Training</td>
-  <td class=3Dxl68 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>&nbsp;</td>
-  <td class=3Dxl67 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>100</td>
+ <tr>
+  <td >Java Essential Training</td>
+  <td >&nbsp;</td>
+  <td>100</td>
  </tr>
- <tr height=3D35 style=3D'height:26.25pt'>
-  <td height=3D35 class=3Dxl89 width=3D104 style=3D'height:26.25pt;border-t=
-op:none;
-  width:78pt'>JAVA-BAS-001</td>
-  <td class=3Dxl69 width=3D297 style=3D'border-top:none;border-left:none;wi=
-dth:223pt'>Introduction
+ <tr >
+  <td>JAVA-BAS-001</td>
+  <td>Introduction
   To Hidaya Projects , Policies and Course Plan For Next Four Months</td>
-  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>Feb-3</td>
-  <td class=3Dxl69 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>1</td>
+  <td>Feb-3</td>
+  <td >1</td>
  </tr>
- <tr height=3D20 style=3D'height:15.0pt'>
-  <td height=3D20 class=3Dxl89 width=3D104 style=3D'height:15.0pt;border-to=
-p:none;
-  width:78pt'>JAVA-BAS-002</td>
-  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>Introduction =
+ <tr>
+  <td>JAVA-BAS-002</td>
+  <td>Introduction =
 to Java
   Language</td>
-  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>Feb-4</td>
-  <td class=3Dxl69 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>1</td>
+  <td>Feb-4</td>
+  <td >1</td>
  </tr>
- <tr height=3D20 style=3D'height:15.0pt'>
-  <td height=3D20 class=3Dxl76 style=3D'height:15.0pt;border-top:none'>JAVA=
+ <tr >
+  <td>JAVA=
 -BAS-003</td>
-  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>Data and Vari=
+  <td>Data and Vari=
 ables</td>
-  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
-th:47pt'>Feb-5</td>
-  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>1</td>
+  <td>Feb-5</td>
+  <td>1</td>
  </tr>
- <tr height=3D20 style=3D'height:15.0pt'>
-  <td rowspan=3D2 height=3D40 class=3Dxl89 width=3D104 style=3D'height:30.0=
-pt;border-top:
-  none;width:78pt'>JAVA-BAS-004</td>
+ <tr >
+  <td >JAVA-BAS-004</td>
   <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
 23pt'>Operators</td>
   <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
@@ -927,3 +896,4 @@ th:47pt'>May-31</td>
  </tr>
  <![endif]>
 </table>
+
