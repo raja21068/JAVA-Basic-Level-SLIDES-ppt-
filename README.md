@@ -1,328 +1,929 @@
 # JAVA-Basic-Level-SLIDES
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-<meta name="Excel Workbook Frameset">
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 15">
-<link rel=File-List
-href="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/filelist.xml">
-<![if !supportTabStrip]>
-<link id="shLink" href="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/sheet001.htm">
-
-<link id="shLink">
-
-<script language="JavaScript">
-<!--
- var c_lTabs=1;
-
- var c_rgszSh=new Array(c_lTabs);
- c_rgszSh[0] = "Course Plan of Java";
-
-
-
- var c_rgszClr=new Array(8);
- c_rgszClr[0]="window";
- c_rgszClr[1]="buttonface";
- c_rgszClr[2]="windowframe";
- c_rgszClr[3]="windowtext";
- c_rgszClr[4]="threedlightshadow";
- c_rgszClr[5]="threedhighlight";
- c_rgszClr[6]="threeddarkshadow";
- c_rgszClr[7]="threedshadow";
-
- var g_iShCur;
- var g_rglTabX=new Array(c_lTabs);
-
-function fnGetIEVer()
-{
- var ua=window.navigator.userAgent
- var msie=ua.indexOf("MSIE")
- if (msie>0 && window.navigator.platform=="Win32")
-  return parseInt(ua.substring(msie+5,ua.indexOf(".", msie)));
- else
-  return 0;
-}
-
-function fnBuildFrameset()
-{
- var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
-  "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "</frameset></frameset><plaintext>";
-
- with (document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- fnBuildTabStrip();
-}
-
-function fnBuildTabStrip()
-{
- var szHTML=
-  "<html><head><style>.clScroll {font:8pt Courier New;color:"+c_rgszClr[6]+";cursor:default;line-height:10pt;}"+
-  ".clScroll2 {font:10pt Arial;color:"+c_rgszClr[6]+";cursor:default;line-height:11pt;}</style></head>"+
-  "<body onclick=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" onselectstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+" topmargin=0 leftmargin=0><table cellpadding=0 cellspacing=0 width=100%>"+
-  "<tr><td colspan=6 height=1 bgcolor="+c_rgszClr[2]+"></td></tr>"+
-  "<tr><td style=\"font:1pt\">&nbsp;<td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(0);\" onmouseout=\"parent.fnMouseOutScroll(0);\"><a>&#171;</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(0);\" ondblclick=\"parent.fnScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(1);\" onmouseout=\"parent.fnMouseOutScroll(1);\"><a>&lt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(1);\" ondblclick=\"parent.fnScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(2);\" onmouseout=\"parent.fnMouseOutScroll(2);\"><a>&gt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(3);\" onmouseout=\"parent.fnMouseOutScroll(3);\"><a>&#187;</a></td>"+
-  "<td style=\"font:1pt\">&nbsp;<td></tr></table></body></html>";
-
- with (frames['frScroll'].document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- szHTML =
-  "<html><head>"+
-  "<style>A:link,A:visited,A:active {text-decoration:none;"+"color:"+c_rgszClr[3]+";}"+
-  ".clTab {cursor:hand;background:"+c_rgszClr[1]+";font:9pt Arial;padding-left:3px;padding-right:3px;text-align:center;}"+
-  ".clBorder {background:"+c_rgszClr[2]+";font:1pt;}"+
-  "</style></head><body onload=\"parent.fnInit();\" onselectstart=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+
-  " topmargin=0 leftmargin=0><table id=tbTabs cellpadding=0 cellspacing=0>";
-
- var iCellCount=(c_lTabs+1)*2;
-
- var i;
- for (i=0;i<iCellCount;i+=2)
-  szHTML+="<col width=1><col>";
-
- var iRow;
- for (iRow=0;iRow<6;iRow++) {
-
-  szHTML+="<tr>";
-
-  if (iRow==5)
-   szHTML+="<td colspan="+iCellCount+"></td>";
-  else {
-   if (iRow==0) {
-    for(i=0;i<iCellCount;i++)
-     szHTML+="<td height=1 class=\"clBorder\"></td>";
-   } else if (iRow==1) {
-    for(i=0;i<c_lTabs;i++) {
-     szHTML+="<td height=1 nowrap class=\"clBorder\">&nbsp;</td>";
-     szHTML+=
-      "<td id=tdTab height=1 nowrap class=\"clTab\" onmouseover=\"parent.fnMouseOverTab("+i+");\" onmouseout=\"parent.fnMouseOutTab("+i+");\">"+
-      "<a href=\""+document.all.item("shLink")[i].href+"\" target=\"frSheet\" id=aTab>&nbsp;"+c_rgszSh[i]+"&nbsp;</a></td>";
-    }
-    szHTML+="<td id=tdTab height=1 nowrap class=\"clBorder\"><a id=aTab>&nbsp;</a></td><td width=100%></td>";
-   } else if (iRow==2) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1></td><td height=1 class=\"clBorder\"></td>";
-    szHTML+="<td height=1></td><td height=1></td>";
-   } else if (iRow==3) {
-    for (i=0;i<iCellCount;i++)
-     szHTML+="<td height=1></td>";
-   } else if (iRow==4) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1 width=1></td><td height=1></td>";
-    szHTML+="<td height=1 width=1></td><td></td>";
-   }
-  }
-  szHTML+="</tr>";
- }
-
- szHTML+="</table></body></html>";
- with (frames['frTabs'].document) {
-  open("text/html","replace");
-  charset=document.charset;
-  write(szHTML);
-  close();
- }
-}
-
-function fnInit()
-{
- g_rglTabX[0]=0;
- var i;
- for (i=1;i<=c_lTabs;i++)
-  with (frames['frTabs'].document.all.tbTabs.rows[1].cells[fnTabToCol(i-1)])
-   g_rglTabX[i]=offsetLeft+offsetWidth-6;
-}
-
-function fnTabToCol(iTab)
-{
- return 2*iTab+1;
-}
-
-function fnNextTab(fDir)
-{
- var iNextTab=-1;
- var i;
-
- with (frames['frTabs'].document.body) {
-  if (fDir==0) {
-   if (scrollLeft>0) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i-1;
-   }
-  } else {
-   if (g_rglTabX[c_lTabs]+6>offsetWidth+scrollLeft) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<=scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i;
-   }
-  }
- }
- return iNextTab;
-}
-
-function fnScrollTabs(fDir)
-{
- var iNextTab=fnNextTab(fDir);
-
- if (iNextTab>=0) {
-  frames['frTabs'].scroll(g_rglTabX[iNextTab],0);
-  return true;
- } else
-  return false;
-}
-
-function fnFastScrollTabs(fDir)
-{
- if (c_lTabs>16)
-  frames['frTabs'].scroll(g_rglTabX[fDir?c_lTabs-1:0],0);
- else
-  if (fnScrollTabs(fDir)>0) window.setTimeout("fnFastScrollTabs("+fDir+");",5);
-}
-
-function fnSetTabProps(iTab,fActive)
-{
- var iCol=fnTabToCol(iTab);
- var i;
-
- if (iTab>=0) {
-  with (frames['frTabs'].document.all) {
-   with (tbTabs) {
-    for (i=0;i<=4;i++) {
-     with (rows[i]) {
-      if (i==0)
-       cells[iCol].style.background=c_rgszClr[fActive?0:2];
-      else if (i>0 && i<4) {
-       if (fActive) {
-        cells[iCol-1].style.background=c_rgszClr[2];
-        cells[iCol].style.background=c_rgszClr[0];
-        cells[iCol+1].style.background=c_rgszClr[2];
-       } else {
-        if (i==1) {
-         cells[iCol-1].style.background=c_rgszClr[2];
-         cells[iCol].style.background=c_rgszClr[1];
-         cells[iCol+1].style.background=c_rgszClr[2];
-        } else {
-         cells[iCol-1].style.background=c_rgszClr[4];
-         cells[iCol].style.background=c_rgszClr[(i==2)?2:4];
-         cells[iCol+1].style.background=c_rgszClr[4];
-        }
-       }
-      } else
-       cells[iCol].style.background=c_rgszClr[fActive?2:4];
-     }
-    }
-   }
-   with (aTab[iTab].style) {
-    cursor=(fActive?"default":"hand");
-    color=c_rgszClr[3];
-   }
-  }
- }
-}
-
-function fnMouseOverScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[7];
-}
-
-function fnMouseOutScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[6];
-}
-
-function fnMouseOverTab(iTab)
-{
- if (iTab!=g_iShCur) {
-  var iCol=fnTabToCol(iTab);
-  with (frames['frTabs'].document.all) {
-   tdTab[iTab].style.background=c_rgszClr[5];
-  }
- }
-}
-
-function fnMouseOutTab(iTab)
-{
- if (iTab>=0) {
-  var elFrom=frames['frTabs'].event.srcElement;
-  var elTo=frames['frTabs'].event.toElement;
-
-  if ((!elTo) ||
-   (elFrom.tagName==elTo.tagName) ||
-   (elTo.tagName=="A" && elTo.parentElement!=elFrom) ||
-   (elFrom.tagName=="A" && elFrom.parentElement!=elTo)) {
-
-   if (iTab!=g_iShCur) {
-    with (frames['frTabs'].document.all) {
-     tdTab[iTab].style.background=c_rgszClr[1];
-    }
-   }
-  }
- }
-}
-
-function fnSetActiveSheet(iSh)
-{
- if (iSh!=g_iShCur) {
-  fnSetTabProps(g_iShCur,false);
-  fnSetTabProps(iSh,true);
-  g_iShCur=iSh;
- }
-}
-
- window.g_iIEVer=fnGetIEVer();
- if (window.g_iIEVer>=4)
-  fnBuildFrameset();
-//-->
-</script>
-<![endif]><!--[if gte mso 9]><xml>
- <x:ExcelWorkbook>
-  <x:ExcelWorksheets>
-   <x:ExcelWorksheet>
-    <x:Name>Course Plan of Java</x:Name>
-    <x:WorksheetSource
-     HRef="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/sheet001.htm"/>
-   </x:ExcelWorksheet>
-  </x:ExcelWorksheets>
-  <x:Stylesheet
-   HRef="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/stylesheet.css"/>
-  <x:WindowHeight>9135</x:WindowHeight>
-  <x:WindowWidth>24000</x:WindowWidth>
-  <x:WindowTopX>32767</x:WindowTopX>
-  <x:WindowTopY>32767</x:WindowTopY>
-  <x:ProtectStructure>False</x:ProtectStructure>
-  <x:ProtectWindows>False</x:ProtectWindows>
- </x:ExcelWorkbook>
-</xml><![endif]-->
-</head>
-
-<frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
- <frame src="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/sheet001.htm" name="frSheet">
- <frame src="JHDO-Course%20Plan%20Of%20Java%20Basic%20Level%20Batch%20HIST-Feb-14%20To%20May-14_files/tabstrip.htm" name="frTabs" marginwidth=0 marginheight=0>
- <noframes>
-  <body>
-   <p>This page uses frames, but your browser doesn't support them.</p>
-  </body>
- </noframes>
-</frameset>
-</html>
+<table border=3D0 cellpadding=3D0 cellspacing=3D0 width=3D527 style=3D'bord=
+er-collapse:
+ collapse;table-layout:fixed;width:395pt'>
+ <col width=3D104 style=3D'mso-width-source:userset;mso-width-alt:3803;widt=
+h:78pt'>
+ <col width=3D297 style=3D'mso-width-source:userset;mso-width-alt:10861;wid=
+th:223pt'>
+ <col width=3D63 span=3D2 style=3D'mso-width-source:userset;mso-width-alt:2=
+304;
+ width:47pt'>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td colspan=3D4 rowspan=3D6 height=3D120 class=3Dxl97 width=3D527 style=
+=3D'height:90.0pt;
+  width:395pt'>Java Essential Training</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+ </tr>
+ <tr height=3D35 style=3D'height:26.25pt'>
+  <td height=3D35 class=3Dxl90 width=3D104 style=3D'height:26.25pt;border-t=
+op:none;
+  width:78pt'>Lecture</td>
+  <td class=3Dxl90 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Course
+  Plan</td>
+  <td class=3Dxl90 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Est.
+  Start Date</td>
+  <td class=3Dxl90 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Est.
+  Days</td>
+ </tr>
+ <tr height=3D27 style=3D'height:20.25pt'>
+  <td colspan=3D2 height=3D27 class=3Dxl98 width=3D401 style=3D'height:20.2=
+5pt;
+  width:301pt'>Java Essential Training</td>
+  <td class=3Dxl68 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+  <td class=3Dxl67 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>100</td>
+ </tr>
+ <tr height=3D35 style=3D'height:26.25pt'>
+  <td height=3D35 class=3Dxl89 width=3D104 style=3D'height:26.25pt;border-t=
+op:none;
+  width:78pt'>JAVA-BAS-001</td>
+  <td class=3Dxl69 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Introduction
+  To Hidaya Projects , Policies and Course Plan For Next Four Months</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-3</td>
+  <td class=3Dxl69 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl89 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>JAVA-BAS-002</td>
+  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>Introduction =
+to Java
+  Language</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-4</td>
+  <td class=3Dxl69 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl76 style=3D'height:15.0pt;border-top:none'>JAVA=
+-BAS-003</td>
+  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>Data and Vari=
+ables</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-5</td>
+  <td class=3Dxl71 style=3D'border-top:none;border-left:none'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl89 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-004</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Operators</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-6</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-7</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl89 width=3D104 style=3D'height:60.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-005</td>
+  <td rowspan=3D4 class=3Dxl96 style=3D'border-top:none'>Control Structures=
+ &amp;
+  Loops</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-8</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl73 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-9</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-10</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-11</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl88 width=3D104 style=3D'height:60.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-006</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Classes,
+  Objects and Methods</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-12</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>4</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-13</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-14</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-15</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl81 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl81 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>&nbsp;</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-16</td>
+  <td class=3Dxl81 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl82 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl82 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>First
+  Performance Test</td>
+  <td class=3Dxl70 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-17</td>
+  <td class=3Dxl82 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-007</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Inheritance</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-18</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-19</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-008</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Polymorphism</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-20</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-21</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D3 height=3D60 class=3Dxl96 style=3D'height:45.0pt;border-to=
+p:none'>JAVA-BAS-009</td>
+  <td rowspan=3D3 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Abstract
+  Classes And Interfaces</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-22</td>
+  <td rowspan=3D3 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl73 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-23</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-24</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-010</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Arrays</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-25</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Feb-26</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl88 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>JAVA-BAS-011</td>
+  <td class=3Dxl88 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>String
+  Handling</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-27</td>
+  <td class=3Dxl88 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl88 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>JAVA-BAS-012</td>
+  <td class=3Dxl88 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Time
+  Manipulation</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Feb-28</td>
+  <td class=3Dxl88 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl88 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>JAVA-BAS-013</td>
+  <td class=3Dxl88 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Understanding
+  Packages</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-1</td>
+  <td class=3Dxl88 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl81 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl81 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>&nbsp;</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-2</td>
+  <td class=3Dxl81 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl77 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl75 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Second
+  Performance Test</td>
+  <td class=3Dxl70 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-3</td>
+  <td class=3Dxl74 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-014</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Generics</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-4</td>
+  <td rowspan=3D2 class=3Dxl99 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-5</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-015</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Collections</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-6</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl80 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-7</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl88 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>JAVA-BAS-016</td>
+  <td class=3Dxl88 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'><span
+  style=3D'mso-spacerun:yes'> </span>Exception Handling</td>
+  <td class=3Dxl80 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-8</td>
+  <td class=3Dxl88 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl91 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl91 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>&nbsp;</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-9</td>
+  <td class=3Dxl91 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-017</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Threading
+  in Java</td>
+  <td class=3Dxl79 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-10</td>
+  <td rowspan=3D2 class=3Dxl100 width=3D63 style=3D'border-top:none;width:4=
+7pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl79 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-11</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-018</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Understanding
+  Streams</td>
+  <td class=3Dxl79 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-12</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl79 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-13</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl96 style=3D'height:30.0pt;border-to=
+p:none'>JAVA-BAS-019</td>
+  <td rowspan=3D2 class=3Dxl96 style=3D'border-top:none'>Accessing Files and
+  Directories</td>
+  <td class=3Dxl79 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-14</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl79 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-15</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl87 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl87 style=3D'border-top:none;border-left:none'>&nbsp;</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-16</td>
+  <td class=3Dxl91 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl92 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl93 style=3D'border-top:none;border-left:none'>Third Perform=
+ance
+  Test</td>
+  <td class=3Dxl84 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-17</td>
+  <td class=3Dxl74 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D5 height=3D100 class=3Dxl88 width=3D104 style=3D'height:75.=
+0pt;
+  border-top:none;width:78pt'>JAVA-BAS-020</td>
+  <td rowspan=3D5 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Graphical
+  User Interfaces in Java (AWT &amp; Swing)</td>
+  <td class=3Dxl72 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-18</td>
+  <td rowspan=3D5 class=3Dxl99 width=3D63 style=3D'border-top:none;width:47=
+pt'>5</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-19</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-20</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-21</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-22</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl94 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl91 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Sunday</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-23</td>
+  <td class=3Dxl94 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl99 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-021</td>
+  <td rowspan=3D2 class=3Dxl99 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Event
+  Handling</td>
+  <td class=3Dxl72 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-24</td>
+  <td rowspan=3D2 class=3Dxl99 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-25</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl96 style=3D'height:60.0pt;border-to=
+p:none'>JAVA-BAS-022</td>
+  <td rowspan=3D4 class=3Dxl96 style=3D'border-top:none'>Database and SQL
+  Fundamentals</td>
+  <td class=3Dxl72 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-26</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>4</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-27</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-28</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl72 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Mar-29</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl86 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl87 style=3D'border-top:none;border-left:none'>Sunday</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-30</td>
+  <td class=3Dxl81 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl78 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl75 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Fourth
+  Performance Test</td>
+  <td class=3Dxl70 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Mar-31</td>
+  <td class=3Dxl74 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D3 height=3D60 class=3Dxl101 style=3D'height:45.0pt;border-t=
+op:none'>JAVA-BAS-023</td>
+  <td rowspan=3D3 class=3Dxl102 width=3D297 style=3D'border-top:none;width:=
+223pt'>JDBC
+  Fundamentals</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-1</td>
+  <td rowspan=3D3 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl96 style=3D'height:30.0pt;border-to=
+p:none'>JAVA-BAS-024</td>
+  <td rowspan=3D2 class=3Dxl96 style=3D'border-top:none'>JDBC Reporting<span
+  style=3D'mso-spacerun:yes'> </span></td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-4</td>
+  <td rowspan=3D2 class=3Dxl96 style=3D'border-top:none'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-5</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl86 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl87 style=3D'border-top:none;border-left:none'>Sunday</td>
+  <td class=3Dxl73 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-6</td>
+  <td class=3Dxl86 style=3D'border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl100 width=3D104 style=3D'height:30.=
+0pt;
+  border-top:none;width:78pt'>JAVA-BAS-025</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'><span
+  style=3D'mso-spacerun:yes'> </span>Design Patterns and Project Descriptio=
+n</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-7</td>
+  <td rowspan=3D2 class=3Dxl100 width=3D63 style=3D'border-top:none;width:4=
+7pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-8</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D3 height=3D60 class=3Dxl96 style=3D'height:45.0pt;border-to=
+p:none'>JAVA-BAS-026</td>
+  <td rowspan=3D3 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Sockets</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-9</td>
+  <td rowspan=3D3 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-10</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-11</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl88 width=3D104 style=3D'height:60.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-027</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>HTML</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-12</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl73 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-13</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-14</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-15</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-028</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Cascaded
+  Style Sheet</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-16</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-17</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl88 width=3D104 style=3D'height:60.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-029</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Java
+  Script</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-18</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-19</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl73 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-20</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-21</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl78 style=3D'height:15.0pt;border-top:none'>&nbs=
+p;</td>
+  <td class=3Dxl75 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Fifth
+  Performance Test</td>
+  <td class=3Dxl70 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-22</td>
+  <td class=3Dxl74 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>1</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-030</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Java
+  Server Pages</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-23</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-24</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D4 height=3D80 class=3Dxl88 width=3D104 style=3D'height:60.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-031</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Servlet</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-25</td>
+  <td rowspan=3D4 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-26</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl73 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-27</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-28</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D2 height=3D40 class=3Dxl88 width=3D104 style=3D'height:30.0=
+pt;border-top:
+  none;width:78pt'>JAVA-BAS-031</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D297 style=3D'border-top:none;width:2=
+23pt'>Java
+  Server Tag Library</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>Apr-29</td>
+  <td rowspan=3D2 class=3Dxl88 width=3D63 style=3D'border-top:none;width:47=
+pt'>2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>Apr-30</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td rowspan=3D30 height=3D600 class=3Dxl88 width=3D104 style=3D'height:45=
+0.0pt;
+  border-top:none;width:78pt'>JAVA-BAS-PRO</td>
+  <td rowspan=3D30 class=3Dxl88 width=3D297 style=3D'border-top:none;width:=
+223pt'>Project</td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>May-1</td>
+  <td rowspan=3D30 class=3Dxl103 style=3D'border-top:none'>25</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-2</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-3</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl83 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-4</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-5</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-6</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-7</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-8</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-9</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-10</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl83 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-11</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-12</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-13</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-14</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-15</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-16</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-17</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl83 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-18</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-19</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-20</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-21</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-22</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-23</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-24</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl83 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-25</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-26</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-27</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-28</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-29</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl85 width=3D63 style=3D'height:15.0pt;border-top=
+:none;
+  border-left:none;width:47pt'>May-30</td>
+ </tr>
+ <tr height=3D20 style=3D'height:15.0pt'>
+  <td height=3D20 class=3Dxl69 width=3D104 style=3D'height:15.0pt;border-to=
+p:none;
+  width:78pt'>&nbsp;</td>
+  <td class=3Dxl69 width=3D297 style=3D'border-top:none;border-left:none;wi=
+dth:223pt'>Farewell<span
+  style=3D'mso-spacerun:yes'> </span></td>
+  <td class=3Dxl85 width=3D63 style=3D'border-top:none;border-left:none;wid=
+th:47pt'>May-31</td>
+  <td class=3Dxl95 style=3D'border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=3D0 style=3D'display:none'>
+  <td width=3D104 style=3D'width:78pt'></td>
+  <td width=3D297 style=3D'width:223pt'></td>
+  <td width=3D63 style=3D'width:47pt'></td>
+  <td width=3D63 style=3D'width:47pt'></td>
+ </tr>
+ <![endif]>
+</table>
