@@ -27,7 +27,7 @@ ntial
  </tr>
  <tr height=3D20 style=3D'height:15.0pt'>
   <td height=3D20 style=3D'height:15.0pt'>JAVA-BAS-001</td>
-  <td>Introduction To Hidaya Projects , Policies and Course Plan For Next F=
+  <td>Introduction To  Projects , Policies and Course Plan For Next F=
 our
   Months</td>
  </tr>
